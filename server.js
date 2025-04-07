@@ -98,7 +98,7 @@ app.post("/signup", jsonparser, (req, res) => {
   User.findOne({ email })
     .then(existingUser => {
       if (existingUser) {
-        console.log("User with this email already exists");
+        console.log("User with this email already exist");
         res.status(409).send("User with this email already exists"); 
       } else {
         const newUser = new User({
