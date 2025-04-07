@@ -11,11 +11,12 @@ require('dotenv').config();
 console.log("Mongo URI from .env:", process.env.MONGO_URI);
 
 const corsOptions = {
-  origin: 'http://127.0.0.1:5500',
-  optionsSuccessStatus: 200 
+  origin: ["http://127.0.0.1:5500", "https://library-project-4gyq.vercel.app"], // Allow multiple origins
+  optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOptions));
+
 app.use(express.json());
 
 app.get("/add", (req, res) => {
