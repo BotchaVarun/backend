@@ -10,12 +10,14 @@ app.use(upload.single('image'));
 require('dotenv').config();
 console.log("Mongo URI from .env:", process.env.MONGO_URI);
 
+
+
 const corsOptions = {
-  origin: ["http://127.0.0.1:5500", "https://library-projects.vercel.app/"], // Allow multiple origins
+  origin: ["http://127.0.0.1:5500", "https://library-projects.vercel.app"], // Allow multiple origins
   optionsSuccessStatus: 200
 };
 
-app.use(cors(corsOptions));
+app.use(cors(corsOptions)); 
 
 app.use(express.json());
 
