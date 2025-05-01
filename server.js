@@ -13,7 +13,7 @@ console.log("Mongo URI from .env:", process.env.MONGO_URI);
 
 
 const corsOptions = {
-  origin: ["http://127.0.0.1:5500", "https://library-projects.vercel.app"], // Allow multiple origins
+  origin: ["http://127.0.0.1:5500", "https://library-projects.vercel.app","https://botchavarun.github.io/frontend/"], // Allow multiple origins
   optionsSuccessStatus: 200
 };
 
